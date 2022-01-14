@@ -1,8 +1,8 @@
-
-spring:
-  profiles: prod
-  datasource:
-    driver-class-name: com.mysql.jdbc.Driver
+datasource:
+    drivername: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springjdbc
+    username: admin
+    password:
 
 
 

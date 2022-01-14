@@ -1,5 +1,6 @@
 package com.vanamadhuryam.calendarscraper.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -10,13 +11,17 @@ import javax.sql.DataSource;
 @Configuration
 @ComponentScan("com.vanamadhuryam.calendarscraper")
 public class JdbcConfig {
+
+    @Autowired
+    DatabaseConfig databaseConfig;
+
     @Bean
     public DataSource mysqlDataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/springjdbc");
-        dataSource.setUsername("admin");
-        dataSource.setPassword("admin");
+        dataSource.setDriverClassName(databaseConfig.getDriverName());
+        dataSource.setUrl(databaseConfig.getUrl());
+        dataSource.setUsername(databaseConfig.getUsername());
+        dataSource.setPassword(databaseConfig.getPassword());
 
         return dataSource;
     }
