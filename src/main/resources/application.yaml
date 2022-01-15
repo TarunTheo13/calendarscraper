@@ -1,6 +1,6 @@
 datasource:
-    drivername: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/springjdbc
+    drivername: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/calendardb
     username: admin
     password:
 
