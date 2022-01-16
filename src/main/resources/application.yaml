@@ -1,8 +1,8 @@
 datasource:
     drivername: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/calendardb
-    username: admin
-    password:
+    username: damodardas
+    password: password123
 
 
 
