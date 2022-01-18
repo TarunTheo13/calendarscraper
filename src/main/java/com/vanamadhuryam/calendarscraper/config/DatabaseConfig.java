@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @EnableConfigurationProperties
-@ConfigurationProperties(prefix="datasource")
+@ConfigurationProperties(prefix="spring.datasource")
 public class DatabaseConfig {
 
     private String driverName;
